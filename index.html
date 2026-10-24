@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -208,7 +207,39 @@
     </footer>
 
   </main>
+<script src="js/main.js" defer></script>
+  <!-- Tela inicial -->
+<section data-pix-screen="intro">
+  <button type="button" data-pix-start>
+    Descobrir meu destino
+  </button>
+</section>
 
+<!-- Tela de processamento -->
+<section data-pix-screen="processing" hidden>
+  <p>PROCESSANDO SEU DESTINO...</p>
+</section>
+
+<!-- Tela da revelação -->
+<section data-pix-screen="reveal" hidden>
+  <p>VALOR FICTÍCIO: R$ 1.000.000,00</p>
+
+  <p>
+    CALMA, CALOTEIRO! 😂
+    Você não perdeu dinheiro.
+    Acabou de cair numa experiência da A.RISE.
+  </p>
+
+  <a data-pix-portfolio href="../">
+    Conhecer a A.RISE
+  </a>
+
+  <button type="button" data-pix-restart>
+    Recomeçar
+  </button>
+</section>
+
+<script src="js/pix.js" defer></script>
 </body>
 
 </html>
