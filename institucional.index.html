@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -20,17 +21,14 @@
 
   <title>A.RISE | Criador de mundos</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js" defer></script>
 </head>
 
 <body>
-
   <main class="page">
 
-    <!-- CABEÇALHO -->
-
     <header class="header">
-
       <a class="logo" href="./" aria-label="A.RISE, página inicial">
         A<span>.</span>RISE
       </a>
@@ -38,13 +36,9 @@
       <span class="header-label">
         ECOSSISTEMA CRIATIVO INDEPENDENTE
       </span>
-
     </header>
 
-    <!-- APRESENTAÇÃO PRINCIPAL -->
-
     <section class="hero" aria-labelledby="hero-title">
-
       <h1 id="hero-title">
         O futuro começa<br>
         com uma <span>ideia.</span>
@@ -57,17 +51,11 @@
       </p>
 
       <div class="hero-bottom">
-        <span class="hero-caption">
-          IDEIAS EM MOVIMENTO
-        </span>
+        <span class="hero-caption">IDEIAS EM MOVIMENTO</span>
       </div>
-
     </section>
 
-    <!-- SOBRE A A.RISE -->
-
     <section class="about" aria-labelledby="about-title">
-
       <span class="section-label">01 / QUEM SOMOS</span>
 
       <h2 id="about-title">
@@ -84,18 +72,12 @@
         Cada ideia é uma oportunidade de experimentar, aprender
         e transformar conceitos em algo real.
       </p>
-
     </section>
 
-    <!-- EXPERIÊNCIA DIGITAL -->
-
     <section class="featured-project" aria-labelledby="featured-title">
-
       <span class="section-label">02 / EXPERIÊNCIA EM DESTAQUE</span>
 
-      <h2 id="featured-title">
-        PIX DO DESTINO
-      </h2>
+      <h2 id="featured-title">PIX DO DESTINO</h2>
 
       <p class="project-category">
         EXPERIÊNCIA WEB INTERATIVA
@@ -111,17 +93,12 @@
         STATUS: EM DESENVOLVIMENTO
       </p>
 
-      <!-- Configurar o endereço real antes da publicação. -->
-      <!-- <a class="project-link" href="URL_REAL_DA_EXPERIENCIA"> -->
-      <!--   Conhecer a experiência -->
-      <!-- </a> -->
-
+      <a class="project-link" href="./pix-do-destino/">
+        Conhecer a experiência
+      </a>
     </section>
 
-    <!-- APOIO VOLUNTÁRIO -->
-
     <section class="support" aria-labelledby="support-title">
-
       <span class="section-label">03 / APOIE A CRIAÇÃO</span>
 
       <h2 id="support-title">
@@ -140,17 +117,13 @@
         e não é necessária para acompanhar nosso trabalho.
       </p>
 
-      <!-- Adicionar o link de doação após definir o destino. -->
-      <!-- <a class="support-link" href="URL_REAL_DE_DOACAO"> -->
-      <!--   Apoiar a A.RISE -->
-      <!-- </a> -->
-
+      <!--
+        Inserir o link real de doação quando o destino
+        de pagamento estiver definido.
+      -->
     </section>
 
-    <!-- INSTAGRAM E BASTIDORES -->
-
     <section class="social" aria-labelledby="social-title">
-
       <span class="section-label">04 / ACOMPANHE A JORNADA</span>
 
       <h2 id="social-title">
@@ -162,18 +135,17 @@
         experimentos, testes, descobertas e próximas etapas.
       </p>
 
-      <!-- Adicionar o perfil oficial antes da publicação. -->
-      <!-- <a class="social-link" href="URL_REAL_DO_INSTAGRAM" -->
-      <!--    target="_blank" rel="noopener noreferrer"> -->
-      <!--   Acompanhar no Instagram -->
-      <!-- </a> -->
-
+      <a
+        class="social-link"
+        href="https://www.instagram.com/alvex.rise/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Acompanhar no Instagram
+      </a>
     </section>
 
-    <!-- PROJETOS FUTUROS -->
-
     <section class="projects" aria-labelledby="projects-title">
-
       <span class="section-label">05 / NOSSO ECOSSISTEMA</span>
 
       <h2 id="projects-title">
@@ -191,55 +163,17 @@
           NOVOS PROJETOS EM BREVE
         </span>
       </div>
-
     </section>
 
-    <!-- RODAPÉ -->
-
     <footer class="footer">
-
-      <span>© 2026 A.RISE</span>
+      <span>© <span data-current-year>2026</span> A.RISE</span>
 
       <span class="signature">
         CRIADOR DE MUNDOS<span>.</span>
       </span>
-
     </footer>
 
   </main>
-<script src="js/main.js" defer></script>
-  <!-- Tela inicial -->
-<section data-pix-screen="intro">
-  <button type="button" data-pix-start>
-    Descobrir meu destino
-  </button>
-</section>
-
-<!-- Tela de processamento -->
-<section data-pix-screen="processing" hidden>
-  <p>PROCESSANDO SEU DESTINO...</p>
-</section>
-
-<!-- Tela da revelação -->
-<section data-pix-screen="reveal" hidden>
-  <p>VALOR FICTÍCIO: R$ 1.000.000,00</p>
-
-  <p>
-    CALMA, CALOTEIRO! 😂
-    Você não perdeu dinheiro.
-    Acabou de cair numa experiência da A.RISE.
-  </p>
-
-  <a data-pix-portfolio href="../">
-    Conhecer a A.RISE
-  </a>
-
-  <button type="button" data-pix-restart>
-    Recomeçar
-  </button>
-</section>
-
-<script src="js/pix.js" defer></script>
 </body>
 
 </html>
