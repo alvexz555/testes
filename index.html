@@ -1,193 +1,214 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111214">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0c">
 
-  <meta name="description"
-        content="Wattson Core, um projeto independente de inteligência artificial em desenvolvimento.">
+  <meta
+    name="description"
+    content="A.RISE é um ecossistema criativo independente que conecta tecnologia, design, experiências digitais e projetos autorais."
+  >
 
-  <title>Wattson Core</title>
-  <link rel="stylesheet" href="style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A.RISE | Criador de mundos">
+  <meta
+    property="og:description"
+    content="Ideias, tecnologia e criatividade construindo novos caminhos."
+  >
+
+  <title>A.RISE | Criador de mundos</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="app">
+
+  <main class="page">
+
+    <!-- CABEÇALHO -->
 
     <header class="header">
-      <a class="brand" href="#" aria-label="Wattson Core">
-        <span class="brand-symbol">W</span>
-        <span class="brand-text">
-          <strong>WATTSON</strong>
-          <small>CORE</small>
-        </span>
+
+      <a class="logo" href="./" aria-label="A.RISE, página inicial">
+        A<span>.</span>RISE
       </a>
 
-      <div class="system-status" id="systemStatus"
-           data-status="offline">
-        <span class="status-dot"></span>
-        <span class="status-text">EM DESENVOLVIMENTO</span>
-      </div>
+      <span class="header-label">
+        ECOSSISTEMA CRIATIVO INDEPENDENTE
+      </span>
+
     </header>
 
-    <main class="main-content">
+    <!-- APRESENTAÇÃO PRINCIPAL -->
 
-      <section class="core-section" aria-labelledby="coreTitle">
-        <div class="core-orb" aria-hidden="true">
-          <div class="core-ring"></div>
-          <div class="core-ring ring-inner"></div>
-          <span class="core-letter">W</span>
-          <span class="core-pulse"></span>
-        </div>
+    <section class="hero" aria-labelledby="hero-title">
 
-        <p class="eyebrow">SISTEMA DE INTELIGÊNCIA</p>
+      <h1 id="hero-title">
+        O futuro começa<br>
+        com uma <span>ideia.</span>
+      </h1>
 
-        <h1 id="coreTitle" class="core-state">
-          Wattson Core
-        </h1>
+      <p class="description">
+        Um ecossistema independente onde criatividade,
+        tecnologia e design se encontram para transformar
+        ideias em projetos reais.
+      </p>
 
-        <p id="coreActivity" class="core-description">
-          Um núcleo em desenvolvimento.
-        </p>
-
-        <span class="core-state-label" id="corePanelStatus">
-          EXPERIMENTAL
+      <div class="hero-bottom">
+        <span class="hero-caption">
+          IDEIAS EM MOVIMENTO
         </span>
-      </section>
+      </div>
 
-      <section class="chat-panel" aria-label="Conversa com Wattson">
-        <header class="chat-header">
-          <div>
-            <p class="eyebrow">ASSISTENTE</p>
-            <h2>Conversa</h2>
-          </div>
+    </section>
 
-          <div class="language-selector" aria-label="Idioma">
-            <button class="language-button active"
-                    type="button" data-lang="pt-BR"
-                    aria-label="Português" aria-pressed="true">
-              PT
-            </button>
-            <button class="language-button"
-                    type="button" data-lang="en-US"
-                    aria-label="English" aria-pressed="false">
-              EN
-            </button>
-          </div>
-        </header>
+    <!-- SOBRE A A.RISE -->
 
-        <div class="chat-history" id="chatHistory" aria-live="polite">
-          <article class="message assistant">
-            <div class="message-avatar" aria-hidden="true">W</div>
-            <div class="message-content">
-              <div class="message-header">
-                <span class="message-label">WATTSON</span>
-                <time class="message-time"></time>
-              </div>
-              <p class="message-text">
-                Olá. Eu sou o Wattson Core. Como posso ajudar?
-              </p>
-            </div>
-          </article>
-        </div>
+    <section class="about" aria-labelledby="about-title">
 
-        <div class="quick-actions">
-          <button class="quick-action" id="clearChatButton" type="button">
-            Limpar conversa
-          </button>
-          <button class="quick-action" id="translateButton" type="button">
-            Traduzir
-          </button>
-        </div>
+      <span class="section-label">01 / QUEM SOMOS</span>
 
-        <form class="message-form" id="messageForm">
-          <label class="visually-hidden" for="messageInput">
-            Escreva sua mensagem
-          </label>
+      <h2 id="about-title">
+        Criamos além do convencional.
+      </h2>
 
-          <input
-            id="messageInput"
-            name="message"
-            type="text"
-            maxlength="2000"
-            placeholder="Escreva uma mensagem..."
-            autocomplete="off"
-            required
-          >
+      <p>
+        A A.RISE é um ecossistema criativo independente dedicado
+        à criação de experiências, desenvolvimento de tecnologia
+        e construção de projetos autorais.
+      </p>
 
-          <button class="send-button" id="sendButton"
-                  type="submit" aria-label="Enviar mensagem">
-            <span id="sendButtonText">Enviar</span>
-            <span aria-hidden="true">↑</span>
-          </button>
-        </form>
+      <p>
+        Cada ideia é uma oportunidade de experimentar, aprender
+        e transformar conceitos em algo real.
+      </p>
 
-        <p class="chat-note">
-          As respostas dependem dos serviços conectados ao núcleo.
-        </p>
-      </section>
+    </section>
 
-      <details class="system-details">
-        <summary>Informações do sistema</summary>
+    <!-- EXPERIÊNCIA DIGITAL -->
 
-        <div class="system-info">
-          <div class="system-item">
-            <span>Projeto</span>
-            <strong>Wattson Core</strong>
-          </div>
+    <section class="featured-project" aria-labelledby="featured-title">
 
-          <div class="system-item">
-            <span>Versão</span>
-            <strong>0.1.0</strong>
-          </div>
+      <span class="section-label">02 / EXPERIÊNCIA EM DESTAQUE</span>
 
-          <div class="system-item">
-            <span>Estado</span>
-            <strong id="systemState" data-state="idle">Em desenvolvimento</strong>
-          </div>
+      <h2 id="featured-title">
+        PIX DO DESTINO
+      </h2>
 
-          <div class="system-item">
-            <span>Memória</span>
-            <strong id="memoryState">Não verificada</strong>
-          </div>
+      <p class="project-category">
+        EXPERIÊNCIA WEB INTERATIVA
+      </p>
 
-          <div class="system-item">
-            <span>Hardware</span>
-            <strong id="robotState">Não conectado</strong>
-          </div>
-        </div>
+      <p>
+        Uma experiência digital que transforma curiosidade em
+        surpresa, usando humor e criatividade para apresentar
+        o universo da A.RISE.
+      </p>
 
-        <div class="activity-section">
-          <h3>Atividade recente</h3>
-          <div class="activity-list" id="activityList">
-            <p class="activity-empty">Nenhuma atividade registrada.</p>
-          </div>
-        </div>
-      </details>
-    </main>
+      <p class="project-status">
+        STATUS: EM DESENVOLVIMENTO
+      </p>
+
+      <!-- Configurar o endereço real antes da publicação. -->
+      <!-- <a class="project-link" href="URL_REAL_DA_EXPERIENCIA"> -->
+      <!--   Conhecer a experiência -->
+      <!-- </a> -->
+
+    </section>
+
+    <!-- APOIO VOLUNTÁRIO -->
+
+    <section class="support" aria-labelledby="support-title">
+
+      <span class="section-label">03 / APOIE A CRIAÇÃO</span>
+
+      <h2 id="support-title">
+        Ajude novas ideias a saírem do papel.
+      </h2>
+
+      <p>
+        Projetos independentes nascem de criatividade, tempo
+        e dedicação. Se você acredita no que estamos construindo,
+        pode contribuir voluntariamente para ajudar nossas
+        próximas criações.
+      </p>
+
+      <p class="support-note">
+        Qualquer valor é bem-vindo. A contribuição é opcional
+        e não é necessária para acompanhar nosso trabalho.
+      </p>
+
+      <!-- Adicionar o link de doação após definir o destino. -->
+      <!-- <a class="support-link" href="URL_REAL_DE_DOACAO"> -->
+      <!--   Apoiar a A.RISE -->
+      <!-- </a> -->
+
+    </section>
+
+    <!-- INSTAGRAM E BASTIDORES -->
+
+    <section class="social" aria-labelledby="social-title">
+
+      <span class="section-label">04 / ACOMPANHE A JORNADA</span>
+
+      <h2 id="social-title">
+        As ideias também têm bastidores.
+      </h2>
+
+      <p>
+        Acompanhe o desenvolvimento dos nossos projetos,
+        experimentos, testes, descobertas e próximas etapas.
+      </p>
+
+      <!-- Adicionar o perfil oficial antes da publicação. -->
+      <!-- <a class="social-link" href="URL_REAL_DO_INSTAGRAM" -->
+      <!--    target="_blank" rel="noopener noreferrer"> -->
+      <!--   Acompanhar no Instagram -->
+      <!-- </a> -->
+
+    </section>
+
+    <!-- PROJETOS FUTUROS -->
+
+    <section class="projects" aria-labelledby="projects-title">
+
+      <span class="section-label">05 / NOSSO ECOSSISTEMA</span>
+
+      <h2 id="projects-title">
+        Em construção, com propósito.
+      </h2>
+
+      <p>
+        Estamos desenvolvendo projetos independentes em diferentes
+        áreas da criatividade e da tecnologia. Novas iniciativas
+        serão apresentadas conforme avançarem.
+      </p>
+
+      <div class="projects-placeholder">
+        <span class="project-status">
+          NOVOS PROJETOS EM BREVE
+        </span>
+      </div>
+
+    </section>
+
+    <!-- RODAPÉ -->
 
     <footer class="footer">
-      <p class="development-notice">
-        <span class="notice-dot"></span>
-        Projeto independente em desenvolvimento.
-      </p>
 
-      <p class="footer-copy">
-        WATTSON CORE <span>·</span> A.RISE
-      </p>
+      <span>© 2026 A.RISE</span>
 
-      <a class="instagram-link"
-         href="https://www.instagram.com/alvex.rise/"
-         target="_blank"
-         rel="noopener noreferrer">
-        Acompanhe os bastidores <span aria-hidden="true">↗</span>
-      </a>
+      <span class="signature">
+        CRIADOR DE MUNDOS<span>.</span>
+      </span>
+
     </footer>
 
-  </div>
+  </main>
 
-  <script src="config.js?v=2"></script>
-  <script src="script.js"></script>
 </body>
+
 </html>
