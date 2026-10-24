@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0c">
+
+  <meta
+    name="description"
+    content="Descubra seu destino financeiro em uma experiência humorística da A.RISE. Nenhuma transação real é realizada."
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PIX DO DESTINO | A.RISE">
+  <meta
+    property="og:description"
+    content="Uma experiência digital inesperada. Seu dinheiro está seguro."
+  >
+
+  <title>PIX DO DESTINO | A.RISE</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/pix.js" defer></script>
+</head>
+
+<body>
+  <main class="pix-page">
+
+    <header class="pix-header">
+      <a class="pix-logo" href="../" aria-label="Voltar ao site da A.RISE">
+        A<span>.</span>RISE
+      </a>
+
+      <span class="pix-header-label">
+        UMA EXPERIÊNCIA DIGITAL
+      </span>
+    </header>
+
+    <div class="pix-content">
+
+      <!-- ETAPA 1: CURIOSIDADE -->
+
+      <section
+        class="pix-screen"
+        data-pix-screen="intro"
+        aria-labelledby="pix-intro-title"
+      >
+        <span class="pix-eyebrow">VOCÊ ESTÁ PREPARADO?</span>
+
+        <div class="pix-symbol" aria-hidden="true">
+          <span>R$</span>
+        </div>
+
+        <h1 id="pix-intro-title">
+          O seu destino<br>
+          <span>financeiro.</span>
+        </h1>
+
+        <p class="pix-description">
+          Existe um valor esperando por você.
+          Quer descobrir qual é?
+        </p>
+
+        <p class="pix-disclaimer">
+          Experiência humorística. Nenhum pagamento será realizado.
+        </p>
+
+        <button class="pix-button" type="button" data-pix-start>
+          Descobrir meu destino
+          <span aria-hidden="true">→</span>
+        </button>
+      </section>
+
+      <!-- ETAPA 2: EXPECTATIVA -->
+
+      <section
+        class="pix-screen"
+        data-pix-screen="processing"
+        aria-labelledby="pix-processing-title"
+        aria-hidden="true"
+        hidden
+      >
+        <div class="pix-loader" aria-hidden="true"></div>
+
+        <span class="pix-eyebrow">AGUARDE UM INSTANTE</span>
+
+        <h1 id="pix-processing-title">
+          Processando<br>
+          seu destino...
+        </h1>
+
+        <p class="pix-description">
+          Calculando os próximos capítulos da sua vida financeira.
+        </p>
+
+        <p class="pix-disclaimer">
+          Simulação local. Nenhum serviço financeiro está conectado.
+        </p>
+      </section>
+
+      <!-- ETAPA 3: REVELAÇÃO -->
+
+      <section
+        class="pix-screen"
+        data-pix-screen="reveal"
+        aria-labelledby="pix-reveal-title"
+        aria-hidden="true"
+        hidden
+      >
+        <span class="pix-eyebrow">RESULTADO DO PROCESSAMENTO</span>
+
+        <div class="pix-amount">
+          <span>VALOR A PAGAR</span>
+          <strong>R$ 1.000.000,00</strong>
+          <small>VALOR FICTÍCIO</small>
+        </div>
+
+        <h1 id="pix-reveal-title">
+          CALMA,<br>
+          <span>CALOTEIRO!</span>
+        </h1>
+
+        <p class="pix-description">
+          😂 Você não perdeu dinheiro.
+          Acabou de cair numa experiência da A.RISE.
+        </p>
+
+        <p class="pix-disclaimer">
+          Não houve cobrança, pagamento ou transferência.
+        </p>
+
+        <a class="pix-button" data-pix-portfolio href="../">
+          Conhecer a A.RISE
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <button
+          class="pix-restart"
+          type="button"
+          data-pix-restart
+        >
+          Quero ver de novo
+        </button>
+      </section>
+
+    </div>
+
+    <footer class="pix-footer">
+      <span>© <span data-current-year>2026</span> A.RISE</span>
+
+      <a
+        href="https://www.instagram.com/alvex.rise/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        INSTAGRAM ↗
+      </a>
+    </footer>
+
+  </main>
+</body>
+
+</html>
