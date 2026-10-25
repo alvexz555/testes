@@ -1,14 +1,13 @@
-
 "use strict";
 
 /**
- * A.RISE | Site institucional
+ * A.RISE | Portfolio
  * Arquivo: js/main.js
  *
  * Responsabilidades:
  * - Atualizar o ano do rodapé.
- * - Manter o comportamento institucional independente
- *   da experiência PIX DO DESTINO.
+ * - Preparar links externos.
+ * - Controlar a navegação mobile.
  */
 
 (() => {
@@ -25,19 +24,65 @@
   }
 
   function initializeExternalLinks() {
-    const instagramLinks = document.querySelectorAll(
+    const externalLinks = document.querySelectorAll(
       'a[href="https://www.instagram.com/alvex.rise/"]'
     );
 
-    instagramLinks.forEach((link) => {
+    externalLinks.forEach((link) => {
       link.setAttribute("target", "_blank");
       link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
+  function initializeMobileNavigation() {
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const navigation = document.querySelector("#main-navigation");
+
+    if (!toggle || !navigation) {
+      return;
+    }
+
+    function closeMenu() {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Abrir menu");
+      navigation.classList.remove("is-open");
+    }
+
+    function toggleMenu() {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      toggle.setAttribute(
+        "aria-label",
+        isOpen ? "Abrir menu" : "Fechar menu"
+      );
+
+      navigation.classList.toggle("is-open", !isOpen);
+    }
+
+    toggle.addEventListener("click", toggleMenu);
+
+    navigation.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 761px)").matches) {
+        closeMenu();
+      }
     });
   }
 
   function initialize() {
     initializeYear();
     initializeExternalLinks();
+    initializeMobileNavigation();
   }
 
   if (document.readyState === "loading") {
