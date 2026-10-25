@@ -1,18 +1,11 @@
-
-/* =========================================
-   PIX DO DESTINO | Experiência interativa
-   ========================================= */
-
 :root {
   color-scheme: dark;
-
   --pix-background: #09090b;
   --pix-surface: #111114;
   --pix-text: #f8f8fa;
   --pix-muted: #a0a0a8;
   --pix-red: #ed4545;
   --pix-border: #29292e;
-
   --pix-padding: clamp(22px, 5vw, 64px);
 }
 
@@ -20,28 +13,27 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   min-width: 320px;
   min-height: 100%;
   background: var(--pix-background);
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
   min-width: 320px;
   min-height: 100vh;
-  flex-direction: column;
   margin: 0;
   background:
-    radial-gradient(
-      ellipse at 50% 40%,
-      rgb(237 69 69 / 6%),
-      transparent 55%
-    ),
+    radial-gradient(ellipse at 50% 40%,
+      rgb(237 69 69 / 6%), transparent 55%),
     var(--pix-background);
   color: var(--pix-text);
-  font-family:
-    Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -69,11 +61,13 @@ a:focus-visible {
   color: #fff;
 }
 
-[hidden] {
-  display: none !important;
-}
+/* Estrutura */
 
-/* Cabeçalho */
+.pix-page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
 .pix-header {
   display: flex;
@@ -85,13 +79,13 @@ a:focus-visible {
   padding: 26px var(--pix-padding);
 }
 
-.pix-brand {
-  font-size: 0.95rem;
+.pix-logo {
+  font-size: 1.05rem;
   font-weight: 850;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
 }
 
-.pix-brand span {
+.pix-logo span {
   color: var(--pix-red);
 }
 
@@ -99,12 +93,9 @@ a:focus-visible {
   color: var(--pix-muted);
   font-size: 0.7rem;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
-/* Área principal */
-
-.pix-main {
+.pix-content {
   display: grid;
   flex: 1;
   place-items: center;
@@ -152,7 +143,7 @@ a:focus-visible {
   color: var(--pix-red);
 }
 
-.pix-screen p {
+.pix-description {
   max-width: 530px;
   margin: 24px auto 0;
   color: var(--pix-muted);
@@ -160,9 +151,36 @@ a:focus-visible {
 }
 
 .pix-disclaimer {
-  margin-top: 24px !important;
-  font-size: 0.78rem !important;
+  margin: 24px auto 0;
+  color: var(--pix-muted);
+  font-size: 0.78rem;
   line-height: 1.7;
+}
+
+/* Símbolos */
+
+.pix-symbol {
+  display: grid;
+  width: 94px;
+  height: 94px;
+  place-items: center;
+  margin: 0 auto 30px;
+  border: 1px solid rgb(237 69 69 / 35%);
+  border-radius: 28px;
+  background: rgb(237 69 69 / 7%);
+  color: var(--pix-red);
+  font-size: 2rem;
+  font-weight: 850;
+  transform: rotate(-5deg);
+  box-shadow: 0 0 60px rgb(237 69 69 / 8%);
+}
+
+.pix-symbol-small {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 26px;
+  border-radius: 22px;
+  font-size: 1.8rem;
 }
 
 /* Botões */
@@ -173,7 +191,7 @@ a:focus-visible {
   justify-content: center;
   gap: 12px;
   min-height: 54px;
-  margin-top: 34px;
+  margin-top: 30px;
   padding: 15px 25px;
   border: 1px solid var(--pix-red);
   border-radius: 9px;
@@ -189,15 +207,20 @@ a:focus-visible {
     box-shadow 180ms ease;
 }
 
-.pix-button:hover {
+.pix-button:hover:not(:disabled) {
   transform: translateY(-2px);
   border-color: #ff6969;
   background: #ff5555;
   box-shadow: 0 10px 35px rgb(237 69 69 / 15%);
 }
 
-.pix-button:active {
+.pix-button:active:not(:disabled) {
   transform: translateY(0);
+}
+
+.pix-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .pix-button-secondary {
@@ -206,19 +229,28 @@ a:focus-visible {
   color: var(--pix-text);
 }
 
-.pix-button-secondary:hover {
+.pix-button-secondary:hover:not(:disabled) {
   border-color: var(--pix-text);
   background: rgb(255 255 255 / 4%);
   box-shadow: none;
 }
 
-/* Tela de processamento */
-
-.pix-processing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.pix-text-button {
+  display: block;
+  margin: 18px auto 0;
+  padding: 10px 14px;
+  border: 0;
+  background: transparent;
+  color: var(--pix-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
 }
+
+.pix-text-button:hover {
+  color: var(--pix-text);
+}
+
+/* Processamento */
 
 .pix-loader {
   position: relative;
@@ -241,11 +273,7 @@ a:focus-visible {
   animation: pix-spin 1.4s linear infinite reverse;
 }
 
-.pix-processing h1 {
-  font-size: clamp(2rem, 6vw, 3.6rem);
-}
-
-.pix-processing p {
+[data-pix-screen="processing"] .pix-description {
   animation: pix-pulse 1.4s ease-in-out infinite;
 }
 
@@ -254,24 +282,22 @@ a:focus-visible {
 .pix-reveal-card {
   position: relative;
   overflow: hidden;
-  margin-top: 34px;
+  margin: 0 auto 34px;
   padding: clamp(26px, 6vw, 48px);
   border: 1px solid var(--pix-border);
   border-radius: 16px;
   background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      rgb(237 69 69 / 12%),
-      transparent 65%
-    ),
+    radial-gradient(ellipse at 50% 0%,
+      rgb(237 69 69 / 12%), transparent 65%),
     var(--pix-surface);
-  animation: pix-reveal 650ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: pix-reveal 650ms cubic-bezier(.2, .8, .2, 1) both;
 }
 
 .pix-reveal-label {
-  margin: 0 !important;
+  display: block;
+  margin: 0;
   color: var(--pix-muted);
-  font-size: 0.75rem !important;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -279,57 +305,56 @@ a:focus-visible {
 
 .pix-amount {
   display: block;
-  margin-block: 16px;
+  margin: 16px 0 10px;
   color: var(--pix-red);
-  font-size: clamp(2.8rem, 9vw, 5.5rem);
+  font-size: clamp(2.2rem, 8vw, 5.2rem);
   font-weight: 850;
   letter-spacing: -0.075em;
   line-height: 1.1;
   overflow-wrap: anywhere;
 }
 
-.pix-reveal-message {
-  color: var(--pix-text) !important;
-  font-size: clamp(1.2rem, 3vw, 1.8rem) !important;
-  font-weight: 750;
+.pix-fiction-label {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid rgb(237 69 69 / 40%);
+  border-radius: 5px;
+  color: #ff7777;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
 }
 
-.pix-reveal-note {
-  font-size: 0.84rem !important;
-}
-
-.pix-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* Elementos opcionais da experiência */
-
-.pix-divider {
-  width: 46px;
-  height: 2px;
-  margin: 28px auto;
-  background: var(--pix-red);
-}
-
-.pix-small {
-  color: #777780 !important;
-  font-size: 0.75rem !important;
-}
-
-.pix-highlight {
-  color: var(--pix-red);
-}
+/* Doação */
 
 .pix-panel {
   margin-top: 28px;
-  padding: 20px;
+  padding: clamp(20px, 5vw, 30px);
   border: 1px solid var(--pix-border);
-  border-radius: 10px;
+  border-radius: 12px;
   background: rgb(255 255 255 / 2%);
+}
+
+.pix-key {
+  margin: 16px 0 0;
+  color: var(--pix-text);
+  font-size: 0.95rem;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.pix-status {
+  min-height: 1.5em;
+  margin: 14px 0 0;
+  color: var(--pix-muted);
+  font-size: 0.8rem;
+}
+
+.pix-small {
+  margin: 18px auto 0;
+  color: #85858e;
+  font-size: 0.78rem;
 }
 
 /* Rodapé */
@@ -347,31 +372,49 @@ a:focus-visible {
   text-align: center;
 }
 
-.pix-footer a {
-  transition: color 180ms ease;
+/* Transição de tela cheia */
+
+.pix-impact-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center,
+      #ff7777 0%,
+      var(--pix-red) 38%,
+      #09090b 100%);
+  animation: pix-impact 850ms cubic-bezier(.2, .7, .2, 1) both;
 }
 
-.pix-footer a:hover {
-  color: var(--pix-text);
+@keyframes pix-impact {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
 }
 
 /* Animações */
 
 @keyframes pix-spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes pix-pulse {
-  0%,
-  100% {
-    opacity: 0.55;
-  }
-
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
 }
 
 @keyframes pix-enter {
@@ -379,7 +422,6 @@ a:focus-visible {
     transform: translateY(12px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
@@ -391,14 +433,13 @@ a:focus-visible {
     transform: scale(0.97) translateY(14px);
     opacity: 0;
   }
-
   to {
     transform: scale(1) translateY(0);
     opacity: 1;
   }
 }
 
-/* Responsividade */
+/* Celulares */
 
 @media (max-width: 600px) {
   .pix-header {
@@ -408,24 +449,24 @@ a:focus-visible {
     padding-block: 20px;
   }
 
-  .pix-main {
-    padding-block: 55px 65px;
+  .pix-content {
+    padding-block: 45px 60px;
   }
 
   .pix-screen h1 {
-    font-size: clamp(2.6rem, 12vw, 4.2rem);
+    font-size: clamp(2.5rem, 11vw, 4.2rem);
   }
 
   .pix-button {
     width: 100%;
   }
 
-  .pix-actions {
-    flex-direction: column;
+  .pix-amount {
+    font-size: clamp(2rem, 9vw, 3.5rem);
   }
 
   .pix-reveal-card {
-    padding: 28px 20px;
+    padding: 26px 16px;
   }
 
   .pix-footer {
@@ -433,10 +474,13 @@ a:focus-visible {
   }
 }
 
+/* Acessibilidade */
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
+    scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
