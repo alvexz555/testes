@@ -1,61 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0b0c">
-
-  <meta
-    name="description"
-    content="Descubra seu destino financeiro em uma experiência humorística da A.RISE. Nenhuma transação real é realizada."
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="PIX DO DESTINO: uma experiência humorística da A.RISE. Nenhuma cobrança ou transação real é realizada.">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="PIX DO DESTINO | A.RISE">
-  <meta
-    property="og:description"
-    content="Uma experiência digital inesperada. Seu dinheiro está seguro."
-  >
+  <meta property="og:description" content="Descubra seu destino financeiro. Seu dinheiro está seguro.">
 
   <title>PIX DO DESTINO | A.RISE</title>
-
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/pix.js" defer></script>
 </head>
 
 <body>
   <main class="pix-page">
-
     <header class="pix-header">
-      <a class="pix-logo" href="../" aria-label="Voltar ao site da A.RISE">
+      <a class="pix-logo" href="../" aria-label="Voltar ao site A.RISE">
         A<span>.</span>RISE
       </a>
-
-      <span class="pix-header-label">
-        UMA EXPERIÊNCIA DIGITAL
-      </span>
+      <span class="pix-header-label">UMA EXPERIÊNCIA DIGITAL</span>
     </header>
 
     <div class="pix-content">
 
-      <!-- ETAPA 1: CURIOSIDADE -->
-
-      <section
-        class="pix-screen"
+      <!-- 1. INTRODUÇÃO -->
+      <section class="pix-screen"
         data-pix-screen="intro"
-        aria-labelledby="pix-intro-title"
-      >
+        aria-labelledby="pix-intro-title">
+
         <span class="pix-eyebrow">VOCÊ ESTÁ PREPARADO?</span>
 
-        <div class="pix-symbol" aria-hidden="true">
-          <span>R$</span>
-        </div>
+        <div class="pix-symbol" aria-hidden="true">R$</div>
 
         <h1 id="pix-intro-title">
-          O seu destino<br>
-          <span>financeiro.</span>
+          O seu destino<br><span>financeiro.</span>
         </h1>
 
         <p class="pix-description">
@@ -68,27 +49,22 @@
         </p>
 
         <button class="pix-button" type="button" data-pix-start>
-          Descobrir meu destino
-          <span aria-hidden="true">→</span>
+          Descobrir meu destino <span aria-hidden="true">→</span>
         </button>
       </section>
 
-      <!-- ETAPA 2: EXPECTATIVA -->
-
-      <section
-        class="pix-screen"
+      <!-- 2. PROCESSAMENTO -->
+      <section class="pix-screen"
         data-pix-screen="processing"
         aria-labelledby="pix-processing-title"
-        aria-hidden="true"
-        hidden
-      >
+        aria-hidden="true" hidden>
+
         <div class="pix-loader" aria-hidden="true"></div>
 
         <span class="pix-eyebrow">AGUARDE UM INSTANTE</span>
 
         <h1 id="pix-processing-title">
-          Processando<br>
-          seu destino...
+          Processando<br><span>seu destino...</span>
         </h1>
 
         <p class="pix-description">
@@ -100,26 +76,22 @@
         </p>
       </section>
 
-      <!-- ETAPA 3: REVELAÇÃO -->
-
-      <section
-        class="pix-screen"
+      <!-- 3. REVELAÇÃO -->
+      <section class="pix-screen"
         data-pix-screen="reveal"
         aria-labelledby="pix-reveal-title"
-        aria-hidden="true"
-        hidden
-      >
+        aria-hidden="true" hidden>
+
         <span class="pix-eyebrow">RESULTADO DO PROCESSAMENTO</span>
 
-        <div class="pix-amount">
-          <span>VALOR A PAGAR</span>
-          <strong>R$ 1.000.000,00</strong>
-          <small>VALOR FICTÍCIO</small>
+        <div class="pix-reveal-card">
+          <p class="pix-reveal-label">VALOR A PAGAR</p>
+          <strong class="pix-amount">R$ 1.000.000,00</strong>
+          <span class="pix-fiction-label">VALOR FICTÍCIO</span>
         </div>
 
         <h1 id="pix-reveal-title">
-          CALMA,<br>
-          <span>CALOTEIRO!</span>
+          CALMA,<br><span>CALOTEIRO!</span>
         </h1>
 
         <p class="pix-description">
@@ -128,38 +100,113 @@
         </p>
 
         <p class="pix-disclaimer">
-          Não houve cobrança, pagamento ou transferência.
+          É uma brincadeira. Não houve cobrança,
+          pagamento ou transferência.
         </p>
 
-        <a class="pix-button" data-pix-portfolio href="../">
-          Conhecer a A.RISE
-          <span aria-hidden="true">→</span>
-        </a>
+        <button class="pix-button" type="button" data-pix-donation>
+          Continuar <span aria-hidden="true">→</span>
+        </button>
 
-        <button
-          class="pix-restart"
-          type="button"
-          data-pix-restart
-        >
+        <button class="pix-text-button" type="button" data-pix-restart>
           Quero ver de novo
         </button>
       </section>
 
+      <!-- 4. DOAÇÃO OPCIONAL -->
+      <section class="pix-screen"
+        data-pix-screen="donation"
+        aria-labelledby="pix-donation-title"
+        aria-hidden="true" hidden>
+
+        <span class="pix-eyebrow">VOCÊ DECIDE</span>
+
+        <div class="pix-symbol pix-symbol-small" aria-hidden="true">♡</div>
+
+        <h1 id="pix-donation-title">
+          Quer apoiar<br><span>os projetos?</span>
+        </h1>
+
+        <p class="pix-description">
+          A brincadeira acabou. Mas, se quiser ajudar a
+          tirar novos projetos do papel, você pode contribuir
+          com qualquer valor pela chave Pix abaixo.
+        </p>
+
+        <div class="pix-panel">
+          <span class="pix-reveal-label">CHAVE PIX PARA DOAÇÃO</span>
+
+          <p class="pix-key" data-pix-key-display>
+            Chave Pix ainda não configurada.
+          </p>
+
+          <button class="pix-button pix-button-secondary"
+            type="button" data-pix-copy disabled>
+            Copiar chave Pix
+          </button>
+
+          <p class="pix-status" data-pix-status aria-live="polite">
+            A contribuição é totalmente opcional.
+          </p>
+        </div>
+
+        <button class="pix-button" type="button" data-pix-instagram-step>
+          Continuar <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="pix-small">
+          Você pode continuar sem fazer nenhuma doação.
+        </p>
+      </section>
+
+      <!-- 5. CONVITE PARA O INSTAGRAM -->
+      <section class="pix-screen"
+        data-pix-screen="instagram"
+        aria-labelledby="pix-instagram-title"
+        aria-hidden="true" hidden>
+
+        <span class="pix-eyebrow">APOIE DE GRAÇA</span>
+
+        <div class="pix-symbol pix-symbol-small" aria-hidden="true">
+          @
+        </div>
+
+        <h1 id="pix-instagram-title">
+          Acompanhe<br><span>a jornada.</span>
+        </h1>
+
+        <p class="pix-description">
+          Quer apoiar sem gastar nada?
+          Siga o Instagram da A.RISE para acompanhar os bastidores,
+          os projetos em desenvolvimento e as próximas novidades.
+        </p>
+
+        <a class="pix-button"
+          data-pix-instagram
+          href="https://www.instagram.com/alvex.rise/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Seguir no Instagram <span aria-hidden="true">↗</span>
+        </a>
+
+        <button class="pix-button pix-button-secondary"
+          type="button" data-pix-continue>
+          Ir para o portfólio <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="pix-small">
+          Seguir o perfil também é opcional.
+        </p>
+      </section>
     </div>
 
     <footer class="pix-footer">
       <span>© <span data-current-year>2026</span> A.RISE</span>
-
-      <a
-        href="https://www.instagram.com/alvex.rise/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        INSTAGRAM ↗
-      </a>
+      <span>UMA EXPERIÊNCIA, NENHUMA COBRANÇA.</span>
     </footer>
-
   </main>
-</body>
 
+  <!-- Transição visual de tela cheia -->
+  <div class="pix-impact-overlay" data-pix-impact hidden aria-hidden="true"></div>
+</body>
 </html>
