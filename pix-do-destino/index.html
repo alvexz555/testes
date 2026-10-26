@@ -18,21 +18,18 @@
 <body>
   <main class="pix-page">
     <header class="pix-header">
-      <a class="pix-logo" href="../" aria-label="Voltar ao site A.RISE">
+      <a class="pix-logo" href="../" aria-label="Voltar ao PIX DO DESTINO">
         A<span>.</span>RISE
       </a>
       <span class="pix-header-label">UMA EXPERIÊNCIA DIGITAL</span>
     </header>
 
     <div class="pix-content">
-
-      <!-- 1. INTRODUÇÃO -->
       <section class="pix-screen"
         data-pix-screen="intro"
         aria-labelledby="pix-intro-title">
 
         <span class="pix-eyebrow">VOCÊ ESTÁ PREPARADO?</span>
-
         <div class="pix-symbol" aria-hidden="true">R$</div>
 
         <h1 id="pix-intro-title">
@@ -53,14 +50,12 @@
         </button>
       </section>
 
-      <!-- 2. PROCESSAMENTO -->
       <section class="pix-screen"
         data-pix-screen="processing"
         aria-labelledby="pix-processing-title"
         aria-hidden="true" hidden>
 
         <div class="pix-loader" aria-hidden="true"></div>
-
         <span class="pix-eyebrow">AGUARDE UM INSTANTE</span>
 
         <h1 id="pix-processing-title">
@@ -76,7 +71,6 @@
         </p>
       </section>
 
-      <!-- 3. REVELAÇÃO -->
       <section class="pix-screen"
         data-pix-screen="reveal"
         aria-labelledby="pix-reveal-title"
@@ -113,14 +107,12 @@
         </button>
       </section>
 
-      <!-- 4. DOAÇÃO OPCIONAL -->
       <section class="pix-screen"
         data-pix-screen="donation"
         aria-labelledby="pix-donation-title"
         aria-hidden="true" hidden>
 
         <span class="pix-eyebrow">VOCÊ DECIDE</span>
-
         <div class="pix-symbol pix-symbol-small" aria-hidden="true">♡</div>
 
         <h1 id="pix-donation-title">
@@ -159,17 +151,13 @@
         </p>
       </section>
 
-      <!-- 5. CONVITE PARA O INSTAGRAM -->
       <section class="pix-screen"
         data-pix-screen="instagram"
         aria-labelledby="pix-instagram-title"
         aria-hidden="true" hidden>
 
         <span class="pix-eyebrow">APOIE DE GRAÇA</span>
-
-        <div class="pix-symbol pix-symbol-small" aria-hidden="true">
-          @
-        </div>
+        <div class="pix-symbol pix-symbol-small" aria-hidden="true">@</div>
 
         <h1 id="pix-instagram-title">
           Acompanhe<br><span>a jornada.</span>
@@ -189,10 +177,11 @@
           Seguir no Instagram <span aria-hidden="true">↗</span>
         </a>
 
-        <button class="pix-button pix-button-secondary"
-          type="button" data-pix-continue>
+        <a class="pix-button pix-button-secondary"
+          data-pix-continue
+          href="../portfolio.html">
           Ir para o portfólio <span aria-hidden="true">→</span>
-        </button>
+        </a>
 
         <p class="pix-small">
           Seguir o perfil também é opcional.
@@ -206,7 +195,9 @@
     </footer>
   </main>
 
-  <!-- Transição visual de tela cheia -->
-  <div class="pix-impact-overlay" data-pix-impact hidden aria-hidden="true"></div>
+  <div class="pix-impact-overlay"
+    data-pix-impact
+    hidden
+    aria-hidden="true"></div>
 </body>
 </html>
